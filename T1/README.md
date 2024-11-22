@@ -100,6 +100,8 @@ public class PriceCalculatorTest {
 }
 ```
 
+---
+
 ### Bonus: Fehler im Code finden
 
 Fehler im ursprünglichen Code:
