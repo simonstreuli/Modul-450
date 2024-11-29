@@ -1,4 +1,42 @@
 
+# Testfälle für die Verkaufssoftware
+
+## Übung 1
+
+### 1. Abstrakte Testfälle
+
+| Testfall-ID | Bedingung                                 | Erwartetes Ergebnis        |
+|-------------|-------------------------------------------|----------------------------|
+| 1         | Kaufpreis < 15.000 CHF                    | Kein Rabatt                |
+| 2         | 15.000 CHF ≤ Kaufpreis < 20.000 CHF       | 5% Rabatt                  |
+| 3         | 20.000 CHF ≤ Kaufpreis < 25.000 CHF       | 7% Rabatt                  |
+| 4         | Kaufpreis ≥ 25.000 CHF                    | 8,5% Rabatt                |
+
+### 2. Konkrete Testfälle
+
+| Testfall-ID | Kaufpreis (CHF) | Erwartetes Ergebnis        |
+|-------------|-----------------|----------------------------|
+| 1           | 14.999          | Kein Rabatt                |
+| 2           | 15.000          | 5% Rabatt                  |
+| 3           | 19.999          | 5% Rabatt                  |
+| 4           | 20.000          | 7% Rabatt                  |
+| 5           | 24.999          | 7% Rabatt                  |
+| 6           | 25.000          | 8,5% Rabatt                |
+| 7           | 30.000          | 8,5% Rabatt                |
+
+## Übung 2
+
+### Funktionale Black-Box Tests für Sixt.ch Autovermietungsplattform
+
+| ID  | Beschreibung                                                  | Erwartetes Resultat                                             | Effektives Resultat                                  | Status   | Mögliche Ursache                             |
+|-----|---------------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------|----------|------------------------------------------------|
+| 1   | Fahrzeugverfügbarkeitssuche                                   | Nach Eingabe des Standorts und der Mietdaten werden verfügbare Fahrzeuge angezeigt. | Fahrzeuge werden korrekt angezeigt oder nicht       | Offen    | Datenbankverbindung oder Suchalgorithmus hat fehler |
+| 2   | Fahrzeugbuchung                                               | Nach Auswahl eines Fahrzeugs und Eingabe der erforderlichen Informationen wird die Buchung erfolgreich abgeschlossen. | Buchungsbestätigung wird angezeigt oder nicht       | Offen    | Fehler im Buchungsprozess oder Zahlungsabwicklung |
+| 3   | Benutzerregistrierung durchführen                             | Nach Eingabe aller erforderlichen Registrierungsdaten wird ein Benutzerkonto erstellt und eine Bestätigungs-E-Mail versendet. | Konto wird erstellt oder nicht                      | Offen    | E-Mail Versandfehler oder Datenbankproblem   |
+| 4   | Preisberechnung für Mietdauer und Zusatzoptionen              | Nach Eingabe der Mietdauer und Auswahl von Zusatzoptionen (z.B. GPS, Kindersitz) wird der korrekte Gesamtpreis angezeigt. | Preis wird korrekt berechnet oder nicht             | Offen    | Fehler bei der Preisberechnung oder Logikfehler |
+| 5   | Benutzerlogin prüfen                                          | Nach Eingabe der korrekten Anmeldeinformationen wird der Benutzer erfolgreich eingeloggt und zur Startseite weitergeleitet. | Benutzer wird eingeloggt oder abgewiesen            | Offen    | Authentifizierungsserver nicht erreichbar oder fehlerhaft |
+
+
 # Testfälle und Verbesserungsvorschläge
 
 ## Überblick
